@@ -58,51 +58,8 @@ function signifyd_settings() {
 			if (strlen($sapi) > 0 ) {
 
 				// if user NOT already registered and if API length entered greater than 0, log as new user
-
+				//removed google analytics code for original developer
 				?>
-
-					<script>
-
-					
-
-						var d = new Date();
-
-						minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
-
-						hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
-
-						ampm = d.getHours() >= 12 ? 'pm' : 'am',
-
-						months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-
-						datetime = months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()+' '+hours+':'+minutes+' '+ampm;
-
-						
-
-						(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-
-						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-
-						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-
-						})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-
-
-						ga('create', 'UA-51241721-1', 'auto');
-
-						ga('send', 'pageview');
-
-						ga('_setDomainName', '<?php echo get_option('home');?>');
-
-						ga('send', 'event', 'Signifyd', '<?php echo get_option('home');?>', datetime, 1);
-
-					  
-
-					</script>
-
-					
-
 				<?php
 
 				update_option('signifyd_registered', 'true');
